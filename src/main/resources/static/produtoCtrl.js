@@ -7,6 +7,7 @@ angular.module("vendas").controller(
 						function(resultadoDoResponse) {
 							$scope.produto = resultadoDoResponse;
 							carregarProduto();
+							delete $scope.produto;
 						});
 			};
 
