@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget
+  xmlns = "http://www.w3.org/ns/widgets"
+  xmlns:gap = "http://phonegap.com/ns/1.0"
+  id = "venda"
+  version = "0.0.1-SNAPSHOT">
+
+  <name>Venda</name>
+  <description>Venda</description>
+  <plugin name="cordova-plugin-whitelist" />
+  <access origin="*" />
+  <allow-intent href="*" />
+  <allow-navigation href="*" />
+</widget>

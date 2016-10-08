@@ -1,0 +1,75 @@
+<div class="container">
+	<!-- Novo produto. -->
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend>Produto</legend>
+			<!-- C�digo -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Código</label>
+				<div class="col-md-6">
+					<input id="txt_codigo" name="codigo" type="text"
+						placeholder="Coloque aqui o código" class="form-control input-md"
+						ng-model="produto.codigo">
+				</div>
+			</div>
+			<!-- Nome -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Nome</label>
+				<div class="col-md-6">
+					<input id="txt_nome" name="nome" type="text"
+						placeholder="Coloque aqui o nome" class="form-control input-md"
+						ng-model="produto.nome">
+				</div>
+			</div>
+			<!-- Tipo -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Tipo</label>
+				<div class="col-md-6">
+					<input id="txt_tipo" name="tipo" type="text"
+						placeholder="Coloque aqui o tipo (perecivel, etc)"
+						class="form-control input-md" ng-model="produto.tipo">
+				</div>
+			</div>
+			<!-- Quantidade -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Quantidade</label>
+				<div class="col-md-6">
+					<input id="txt_quantidade" name="quantidade" type="text"
+						placeholder="Coloque aqui a quantidade"
+						class="form-control input-md" ng-model="produto.quantidade">
+				</div>
+			</div>
+			
+			<table >
+				<thead>
+					<tr>
+						<th data-field="codigo">Código</th>
+						<th data-field="nome">Nome</th>
+						<th data-field="tipo">Tipo</th>
+						<th data-field="quantidade">Quantidade</th>
+						<th >Excluir</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="produto in produtos">
+						<td> {{produto.codigo}} </td>
+						<td> {{produto.nome}} </td>
+						<td> {{produto.tipo}} </td>
+						<td> {{produto.quantidade}} </td>
+						<td><a href="#/produto" ng-click="deletarProduto(produto)">
+						<i class="material-icons">delete_forever</i></a></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<!-- Button -->
+			<a class="waves-effect light-blue btn-large left" ng-click="novoProduto(produto)" >
+				Salvar
+			</a>
+			
+			</fieldset>
+	</form>
+</div>
+<!-- Container -->
