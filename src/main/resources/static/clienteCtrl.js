@@ -6,7 +6,8 @@ angular.module("vendas").controller(
 				$http.post("cliente/novo", cliente).success(
 						function(resultadoDoResponse) {
 							$scope.cliente = resultadoDoResponse;
-							carregarCliente()
+							carregarCliente();
+							delete $scope.cliente;
 						});
 			};
 
